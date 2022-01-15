@@ -2,10 +2,26 @@
 //When the user clicks the start button, the timer should reset
 
 //Present a series of blanks that are equal to the number of letters in a randomly selected word that is not displayed by default
-
+const word = document.querySelector("#word")
 const availableWords = ["variable", "modulo", "boolean", "array", "object"];
 
-console.log(availableWords[Math.floor(Math.random() * availableWords.length)]);
+
+
+let chosenWord = availableWords[Math.floor(Math.random() * availableWords.length)];
+console.log(chosenWord);
+
+let lettersArray = chosenWord.split('');
+
+for (let i = 0; i < lettersArray.length; i++) {
+    console.log(lettersArray[i]);  
+
+    var letterSpan = document.createElement("span");
+    letterSpan.textContent = lettersArray[i];
+    letterSpan.setAttribute("data-index", i);
+
+    
+    word.appendChild(letterSpan);
+}
 
 //On a key event, capture the entered key 
 //If the key entered by the user matches the hidden letter in the word, display that letter
