@@ -16,7 +16,7 @@ for (let i = 0; i < lettersArray.length; i++) {
     console.log(lettersArray[i]);  
 
     var letterSpan = document.createElement("span");
-    letterSpan.textContent = lettersArray[i];
+    letterSpan.textContent = "-";
     letterSpan.setAttribute("data-index", i);
 
     
