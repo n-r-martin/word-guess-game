@@ -3,6 +3,10 @@
 
 //Present a series of blanks that are equal to the number of letters in a randomly selected word that is not displayed by default
 
+const availableWords = ["variable", "modulo", "boolean", "array", "object"];
+
+console.log(availableWords[Math.floor(Math.random() * availableWords.length)]);
+
 //On a key event, capture the entered key 
 //If the key entered by the user matches the hidden letter in the word, display that letter
 
